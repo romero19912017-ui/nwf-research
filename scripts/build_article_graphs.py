@@ -191,6 +191,55 @@ def fig9_landscape():
     plt.savefig(OUT / "09_landscape.png", dpi=150, bbox_inches="tight")
     plt.close()
 
+def fig_cover_main_advantage():
+    """Главное преимущество NWF: инкрементальность без забывания (для обложки)."""
+    import numpy as np
+
+    methods = ["NWF", "iCaRL", "EWC", "Fine-tuning"]
+    acc = [86.2, 54.0, 18.3, 10.3]
+    colors = ["#5dd879", "#8b9dc3", "#c4a8b8", "#8b9a9e"]
+    # Тёмные версии для тени
+    colors_dark = ["#3d9e52", "#6b7da3", "#9a7f8f", "#6b7a7e"]
+    fig, ax = plt.subplots(figsize=(12, 7), facecolor="#f5f5f5")
+    ax.set_facecolor("#f5f5f5")
+    x = np.arange(len(methods))
+    width = 0.55
+    off = 0.04  # Смещение тени
+    # Сетка
+    ax.set_axisbelow(True)
+    ax.yaxis.grid(True, color="#9ca8b4", linestyle="-", linewidth=0.8, alpha=0.9)
+    ax.xaxis.grid(True, color="#9ca8b4", linestyle="-", linewidth=0.8, alpha=0.9)
+    ax.set_xticks(x)
+    ax.set_xticklabels(methods, fontsize=14, color="#2c3e50")
+    ax.set_ylabel("Точность (%)", fontsize=14, color="#2c3e50")
+    ax.set_title("Инкрементальное обучение без забывания\nSplit-MNIST, после 3 задач",
+                 fontsize=15, color="#2c3e50", pad=20)
+    ax.set_ylim(0, 100)
+    ax.set_xlim(-0.5, len(methods) - 0.5)
+    ax.tick_params(colors="#4a5568", labelsize=12)
+    for spine in ax.spines.values():
+        spine.set_color("#8b95a0")
+        spine.set_linewidth(1)
+    # Тень (смещённые тёмные столбики - эффект 3D)
+    ax.bar(x + off, acc, width, color=colors_dark, alpha=0.35, edgecolor="none")
+    # Основные столбики
+    bars = ax.bar(x, acc, width, color=colors, edgecolor="#ffffff", linewidth=2)
+    # Блики: светлая полоса сверху каждого столбика
+    for i, (b, v) in enumerate(zip(bars, acc)):
+        if v > 5:
+            h_glow = min(8, v * 0.12)
+            rect = plt.Rectangle((b.get_x() + width * 0.15, b.get_height() - h_glow),
+                                 width * 0.7, h_glow, facecolor="white", alpha=0.4,
+                                 edgecolor="none")
+            ax.add_patch(rect)
+        ax.text(b.get_x() + width / 2, b.get_height() + 3, f"{v}%",
+                ha="center", fontsize=13, fontweight="bold", color="#2c3e50")
+    plt.tight_layout()
+    plt.savefig(OUT / "cover_main_advantage.png", dpi=200, bbox_inches="tight",
+                facecolor="#f5f5f5", edgecolor="none")
+    plt.close()
+
+
 if __name__ == "__main__":
     fig1_compression()
     fig2_noise()
@@ -201,4 +250,5 @@ if __name__ == "__main__":
     fig7_calibration()
     fig8_interpolation()
     fig9_landscape()
+    fig_cover_main_advantage()
     print(f"Графики сохранены в {OUT}")

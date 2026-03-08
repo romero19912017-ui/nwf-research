@@ -2,11 +2,30 @@ Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
 
 Copyright (c) 2025 Belousov Roman Sergeevich (Белоусов Роман Сергеевич)
 
-SUMMARY:
-- Non-commercial use: FREE. You may use, copy, modify, and distribute this
-  software and documentation for non-commercial purposes, provided you give
-  appropriate credit to the author.
-- Commercial use: requires explicit written permission from the copyright holder.
-  Contact: roma.belyy.5550955@mail.ru
+================================================================================
+SUMMARY / КРАТКО
+================================================================================
 
-Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+NON-COMMERCIAL USE / НЕКОММЕРЧЕСКОЕ ИСПОЛЬЗОВАНИЕ:
+  FREE with attribution. You may use, copy, modify, and distribute this
+  software and documentation for non-commercial purposes (research, education,
+  personal projects) if you give appropriate credit to the author.
+
+  Бесплатно при указании авторства. Разрешено использование, копирование,
+  модификация и распространение в некоммерческих целях (наука, образование,
+  личные проекты) с указанием авторства.
+
+COMMERCIAL USE / КОММЕРЧЕСКОЕ ИСПОЛЬЗОВАНИЕ:
+  STRICTLY PROHIBITED without explicit written permission from the author.
+  This applies to the software, documentation, AND the underlying theory
+  (Neural Weight Fields / Нейровесовые Поля, NWF), including any derivative
+  implementations or commercial products based on these concepts.
+
+  Строго запрещено без письменного разрешения автора. Это касается программного
+  кода, документации И самой теории (Нейровесовые Поля, NWF), включая любые
+  производные реализации или коммерческие продукты на основе данных концепций.
+
+CONTACT / ПО ВОПРОСАМ СОТРУДНИЧЕСТВА И ЛИЦЕНЗИРОВАНИЯ:
+  roma.belyy.5550955@mail.ru
+
+Full license text (CC BY-NC 4.0): https://creativecommons.org/licenses/by-nc/4.0/legalcode
