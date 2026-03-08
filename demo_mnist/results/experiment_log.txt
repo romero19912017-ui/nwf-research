@@ -1,0 +1,10 @@
+=== NWF MNIST Experiment (PyTorch) ===
+K=10, dim=64, encoder=True
+num_steps=20, step_size=0.1
+k_neighbors=100, sigma=0.5
+noise_std=0.2, weighted_voting=False
+
+NWF: accuracy=0.9460, time=1.60s
+1-NN: accuracy=0.9440, time=0.03s
+LogReg: accuracy=0.9680, time=0.01s
+MLP: accuracy=0.9700, time=0.03s

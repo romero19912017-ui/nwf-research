@@ -1,0 +1,16 @@
+# NWF Research - конфигурация по умолчанию
+
+data:
+  dataset: mnist
+  latent_dim: 64
+
+vae:
+  hidden_dims: [512, 256]
+  latent_dim: 64
+
+nwf:
+  mahalanobis: true
+  search_k: 10
+
+experiments:
+  seed: 42
