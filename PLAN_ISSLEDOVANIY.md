@@ -82,11 +82,13 @@
 
 ---
 
-## Направление 5: Kalman-NWF и хроно-поля (T-NWF)
+## Направление 5: Kalman-NWF и хроно-поля (T-NWF) [РЕАЛИЗОВАНО]
 
-**Идея:** Фильтр Калмана — рекурсивное обновление (z, Σ) без пересчёта с нуля. Заряд как траектория z(t).
+**Фильтр Калмана — неотъемлемая часть теории NWF** (Аксиома А5). Рекурсивное обновление (z, Sigma) по принципу свободной энергии.
 
 **Теоретическое обоснование:** Baltieri & Isomura (2021) — Kalman = steady-state градиентного спуска по свободной энергии.
+
+**Реализация:** `nwf/kalman.py` — KalmanEncoder с encode_static(), update().
 
 **Архитектура Kalman-кодировщика:**
 ```
@@ -132,22 +134,21 @@ nwf-research/
 │   ├── core.py              # Charge, потенциал, Махаланобис
 │   ├── vae_encoder.py       # VAE, MAP-инференс
 │   ├── inference.py         # Байесовский вывод
-│   ├── kalman_encoder.py    # Kalman-кодировщик
-│   ├── storage.py           # NWFStorage, add, update, search
-│   └── search.py            # k-NN по Махаланобису
+│   ├── kalman.py            # KalmanEncoder (encode_static, update)
+│   ├── storage.py           # NWFStorage, add, search
+│   ├── baselines.py         # L2Index, HDCIndex
+│   ├── continual.py         # EWC, MLPClassifier
+│   └── data.py              # get_mnist, get_cifar10
 ├── experiments/
-│   ├── 01_fundament/        # Валидация поиска, сжатие
-│   ├── 02_incremental/      # Split-MNIST, EWC, iCaRL
-│   ├── 02_drift/            # Дрейф концепций
-│   ├── 03_rag/              # NWF-RAG, семантическая интерполяция
-│   ├── 03_ood/              # OOD-детекция
-│   ├── 04_trusted_ai/       # Σ, визуализация, reliability
-│   ├── 05_kalman/           # Скорость, обновление, калибровка, шум
-│   └── 05_tnwf/             # Темпоральные NWF
+│   ├── 00_convergence/      # Kalman vs GD, сходимость
+│   ├── 01_compression/      # NWF vs FAISS vs HDC
+│   ├── 02_noise/            # Устойчивость к шуму
+│   ├── 03_incremental/      # Split-MNIST vs EWC, Fine-tuning
+│   ├── 04_ood/              # OOD-детекция MNIST vs Fashion
+│   ├── 05_calibration/      # ECE
+│   └── 06_online_update/    # Онлайн-обновление (дрейф концепций)
 ├── configs/
-├── demo_mnist/              # Упрощённая демонстрация (legacy)
-├── results/
-└── notebooks/
+└── results/
 ```
 
 ---

@@ -1,0 +1,7 @@
+{
+  "recon_bce_with_update": 0.48646645257249477,
+  "recon_bce_without_update": 0.6112293710000813,
+  "improvement_ratio": 1.2564676716509944,
+  "n_sequences": 20,
+  "n_frames": 8
+}

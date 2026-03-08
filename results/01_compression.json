@@ -1,0 +1,28 @@
+{
+  "NWF_Mahalanobis": {
+    "precision_at_k": 0.90234375,
+    "bytes_per_obj": 512,
+    "compression_ratio": 1.53125
+  },
+  "FAISS_L2": {
+    "precision_at_k": 0.89453125,
+    "bytes_per_obj": 256,
+    "compression_ratio": 3.0625
+  },
+  "HDC": {
+    "precision_at_k": 0.91796875,
+    "bytes_per_obj": 250,
+    "compression_ratio": 3.136
+  },
+  "NWF_Euclidean": {
+    "precision_at_k": 0.89453125,
+    "bytes_per_obj": 512,
+    "compression_ratio": 1.53125
+  },
+  "_meta": {
+    "n_indexed": 3072,
+    "n_test": 500,
+    "k": 10,
+    "use_kalman": false
+  }
+}

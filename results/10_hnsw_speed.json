@@ -1,0 +1,15 @@
+{
+  "brute_force": {
+    "precision_at_10": 0.8203125,
+    "latency_ms_per_query": 0.45755390621593506
+  },
+  "hnsw": {
+    "precision_at_10": 0.875,
+    "latency_ms_per_query": 0.03254765630344991,
+    "speedup": 14.057967859499497
+  },
+  "_meta": {
+    "n_index": 512,
+    "n_queries": 128
+  }
+}

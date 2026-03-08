@@ -1,0 +1,15 @@
+{
+  "NWF_Mahalanobis": {
+    "auc_ood": 0.8125749999999999
+  },
+  "NWF_Potential": {
+    "auc_ood": 0.7825
+  },
+  "FAISS_L2": {
+    "auc_ood": 0.8271249999999999
+  },
+  "_meta": {
+    "n_in": 200,
+    "n_ood": 200
+  }
+}

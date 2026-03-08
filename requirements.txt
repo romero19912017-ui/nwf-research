@@ -4,3 +4,5 @@ numpy
 scikit-learn
 tensorflow-datasets
 matplotlib
+faiss-cpu
+scipy

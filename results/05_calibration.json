@@ -1,0 +1,30 @@
+{
+  "metrics_ece": {
+    "min_mahalanobis": {
+      "ece": 0.7164040987938644,
+      "n_val": 100
+    },
+    "potential": {
+      "ece": 0.8399904228046142,
+      "n_val": 100
+    },
+    "trace_sigma": {
+      "ece": 0.37004914820194235,
+      "n_val": 100
+    },
+    "agreement_ratio": {
+      "ece": 0.18100000314414502,
+      "n_val": 100
+    }
+  },
+  "best_metric": "agreement_ratio",
+  "platt_alpha": 30.825647728337042,
+  "platt_beta": -11.018881596240792,
+  "ece_test_before": 0.21250000160187482,
+  "ece_test_after": 0.0342342488137099,
+  "_meta": {
+    "n_index": 512,
+    "n_val": 100,
+    "n_bins": 10
+  }
+}
