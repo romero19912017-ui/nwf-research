@@ -30,8 +30,9 @@ pip install torch torchvision numpy scikit-learn tensorflow-datasets
 
 ## Статус
 
-- [ ] Фаза 1: VAE, core, storage
-- [ ] Фаза 2: Эксперименты H1, H2, H3
-- [ ] Фаза 3: Расширение (CIFAR, IMDB)
+- [ ] Фаза 1: Фундамент (VAE, core, Махаланобис, storage)
+- [ ] Фаза 2: H1 сжатие, H2 шум, H3 инкрементальность
+- [ ] Фаза 3: Kalman-кодировщик
+- [ ] Фаза 4: NWF-RAG, доверенный ИИ, T-NWF
 
 **Лицензия:** CC BY-NC 4.0
