@@ -470,7 +470,7 @@
 
 Конечно, у NWF есть ограничения: он уступает HDC в устойчивости к шуму и требует предобученного VAE. Но это направление только начинает развиваться, и я надеюсь, что сообщество поможет улучшить эти аспекты.
 
-Весь код и инструкции по воспроизведению доступны в [репозитории nwf-research на GitHub](https://github.com/romero19912017-ui/nwf-research). Буду рад вашим вопросам, замечаниям и предложениям!
+Весь код и инструкции по воспроизведению доступны в [репозитории nwf-research на GitHub](https://github.com/romero19912017-ui/nwf-research). Python-библиотеки для внедрения NWF: `pip install nwf-core nwf-vision` — [nwf-core](https://pypi.org/project/nwf-core/), [nwf-vision](https://pypi.org/project/nwf-vision/) на PyPI. Буду рад вашим вопросам, замечаниям и предложениям!
 
 ---
 
@@ -478,6 +478,9 @@
 
 1. Белоусов Р.С. **Нейровесовые поля: теория семантического континуума для хранения и обработки информации**. Препринт, 2025. DOI: [10.24108/preprints-3113697](https://doi.org/10.24108/preprints-3113697)
 2. Репозиторий с кодом и экспериментами: [nwf-research](https://github.com/romero19912017-ui/nwf-research)
+3. Python-библиотеки NWF (`pip install nwf-core nwf-vision`):
+   - [nwf-core](https://pypi.org/project/nwf-core/) — ядро (Charge, Field, метрики, FAISS, калибраторы)
+   - [nwf-vision](https://pypi.org/project/nwf-vision/) — компьютерное зрение (ConvVAE, ResNet-энкодеры, Split-CIFAR)
 
 ---
 

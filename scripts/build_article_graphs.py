@@ -200,8 +200,8 @@ def fig_cover_main_advantage():
     colors = ["#5dd879", "#8b9dc3", "#c4a8b8", "#8b9a9e"]
     # Тёмные версии для тени
     colors_dark = ["#3d9e52", "#6b7da3", "#9a7f8f", "#6b7a7e"]
-    fig, ax = plt.subplots(figsize=(12, 7), facecolor="#f5f5f5")
-    ax.set_facecolor("#f5f5f5")
+    fig, ax = plt.subplots(figsize=(12, 7), facecolor="#e8e8e8")
+    ax.set_facecolor("#e8e8e8")
     x = np.arange(len(methods))
     width = 0.55
     off = 0.04  # Смещение тени
@@ -210,13 +210,13 @@ def fig_cover_main_advantage():
     ax.yaxis.grid(True, color="#9ca8b4", linestyle="-", linewidth=0.8, alpha=0.9)
     ax.xaxis.grid(True, color="#9ca8b4", linestyle="-", linewidth=0.8, alpha=0.9)
     ax.set_xticks(x)
-    ax.set_xticklabels(methods, fontsize=14, color="#2c3e50")
-    ax.set_ylabel("Точность (%)", fontsize=14, color="#2c3e50")
+    ax.set_xticklabels([])
+    ax.set_ylabel("Точность (%)", fontsize=16, color="#1a1a1a")
     ax.set_title("Инкрементальное обучение без забывания\nSplit-MNIST, после 3 задач",
-                 fontsize=15, color="#2c3e50", pad=20)
+                 fontsize=17, color="#1a1a1a", pad=20)
     ax.set_ylim(0, 100)
     ax.set_xlim(-0.5, len(methods) - 0.5)
-    ax.tick_params(colors="#4a5568", labelsize=12)
+    ax.tick_params(colors="#1a1a1a", labelsize=14)
     for spine in ax.spines.values():
         spine.set_color("#8b95a0")
         spine.set_linewidth(1)
@@ -233,10 +233,14 @@ def fig_cover_main_advantage():
                                  edgecolor="none")
             ax.add_patch(rect)
         ax.text(b.get_x() + width / 2, b.get_height() + 3, f"{v}%",
-                ha="center", fontsize=13, fontweight="bold", color="#2c3e50")
+                ha="center", fontsize=16, fontweight="bold", color="#1a1a1a")
+        h_bar = b.get_height()
+        y_label = max(h_bar * 0.45, 8)  # Внутри столбца
+        ax.text(b.get_x() + width / 2, y_label, methods[i], ha="center", va="center",
+                fontsize=15, fontweight="bold", color="#1a1a1a")
     plt.tight_layout()
     plt.savefig(OUT / "cover_main_advantage.png", dpi=200, bbox_inches="tight",
-                facecolor="#f5f5f5", edgecolor="none")
+                facecolor="#e8e8e8", edgecolor="none")
     plt.close()
 
 

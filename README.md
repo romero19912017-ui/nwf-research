@@ -4,6 +4,10 @@
 
 **Репозиторий:** [https://github.com/romero19912017-ui/nwf-research](https://github.com/romero19912017-ui/nwf-research)
 
+**Python-библиотеки:** `pip install nwf-core nwf-vision`
+- [nwf-core](https://pypi.org/project/nwf-core/) — ядро (Charge, Field, FAISS, калибраторы)
+- [nwf-vision](https://pypi.org/project/nwf-vision/) — компьютерное зрение (ConvVAE, Split-CIFAR)
+
 **Автор и исполнитель:** Белоусов Роман
 
 ### Основные преимущества NWF по итогам исследования
